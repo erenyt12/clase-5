@@ -12,14 +12,14 @@ Luego pasar el objeto resultante por una fn list() e imprimirlo.
     >>> [10, 8, 6]
 """
 
-def filter (primer_parametro,segundo_parametro):
-    for i in segundo_parametro:
-        if primer_parametro(i):
+def myFilter(funcion,coleccion):
+    for i in coleccion:
+        if funcion(i):
             yield i
 
 
 num = [3, 1, 10, 8, 6, 2]
 
-# resultado = filter(lambda x: x > 3, num)
-# print(list(resultado))
+resultado = myFilter(lambda x: x > 3, num)
+print(list(resultado))
 

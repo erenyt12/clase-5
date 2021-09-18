@@ -13,20 +13,20 @@ Luego pasar el objeto resultante por una fn list() e imprimirlo.
     >>> [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 """
 # Metodo 1
-# def map(mi_lista):
+# def mymap(mi_lista):
 #     for ele in mi_lista:
 #         yield ele 
 
-# retorno = map(range(3,13))
+# retorno = mymap(range(3,13))
 # print(list(retorno))
     
 # Metodo 2
-# def map(primer_parametro, mi_lista):
-#     for ele in mi_lista:
-#         yield primer_parametro(ele)
+def mymap(primer_parametro, mi_lista):
+    for ele in mi_lista:
+        yield primer_parametro(ele)
 
-# resultado =  map(lambda x: x + 3, range(10))
-# print(list(resultado))
+resultado =  mymap(lambda x: x + 3, range(10))
+print(list(resultado))
     
 
 
